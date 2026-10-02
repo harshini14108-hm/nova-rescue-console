@@ -1,6 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+} from "recharts";
+import {
   orders,
   riskLevel,
   ACTION_IMPACT,
@@ -178,21 +188,19 @@ function Dashboard() {
         <div className="rounded-xl border border-border bg-card p-5">
           <h2 className="text-lg font-semibold text-foreground">Do customers come back?</h2>
           <p className="mt-1 text-sm text-muted-foreground">30-day reorder rate by first-order experience</p>
-          <div className="mt-6 space-y-5">
-            {cohortData.map((c, i) => (
-              <div key={c.label}>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-foreground">{c.label}</span>
-                  <span className="font-semibold text-foreground">{c.reorderRate}%</span>
-                </div>
-                <div className="mt-2 h-4 overflow-hidden rounded-full bg-muted">
-                  <div
-                    className={`h-full rounded-full transition-all ${i === 0 ? "bg-risk-low" : "bg-risk-high"}`}
-                    style={{ width: `${c.reorderRate}%` }}
-                  />
-                </div>
-              </div>
-            ))}
+          <div className="mt-6 h-56">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={cohortData} layout="vertical" margin={{ left: 8, right: 24 }}>
+                <CartesianGrid strokeDasharray="3 3" horizontal={false} className="stroke-border" />
+                <XAxis type="number" domain={[0, 100]} tickFormatter={(v) => `${v}%`} className="text-xs" />
+                <YAxis type="category" dataKey="label" width={130} className="text-xs" />
+                <Tooltip formatter={(v) => [`${v}%`, "Reorder rate"]} />
+                <Bar dataKey="reorderRate" radius={[0, 6, 6, 0]}>
+                  <Cell className="fill-risk-low" />
+                  <Cell className="fill-risk-high" />
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
           </div>
           <p className="mt-5 rounded-lg bg-muted px-3 py-2 text-sm text-muted-foreground">
             A late first order cuts repeat purchases by more than half.
@@ -202,18 +210,16 @@ function Dashboard() {
         <div className="rounded-xl border border-border bg-card p-5">
           <h2 className="text-lg font-semibold text-foreground">Why orders fail</h2>
           <p className="mt-1 text-sm text-muted-foreground">Risky orders by root cause</p>
-          <div className="mt-6 space-y-5">
-            {failureBreakdown.map((f) => (
-              <div key={f.reason}>
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-foreground">{f.reason}</span>
-                  <span className="font-semibold text-foreground">{f.count}</span>
-                </div>
-                <div className="mt-2 h-4 overflow-hidden rounded-full bg-muted">
-                  <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${(f.count / maxFailure) * 100}%` }} />
-                </div>
-              </div>
-            ))}
+          <div className="mt-6 h-56">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={failureBreakdown} margin={{ left: 8, right: 24, bottom: 8 }}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} className="stroke-border" />
+                <XAxis dataKey="reason" className="text-xs" interval={0} />
+                <YAxis className="text-xs" />
+                <Tooltip formatter={(v) => [v, "Risky orders"]} />
+                <Bar dataKey="count" radius={[6, 6, 0, 0]} className="fill-primary" />
+              </BarChart>
+            </ResponsiveContainer>
           </div>
         </div>
       </section>
