@@ -1,4 +1,4 @@
-// Simulated data for NOVA CART Rescue Console. All data is fake.
+// Fixed simulated data for NOVA PULSE. All data is fake and generated locally.
 
 export type RiskLevel = "High" | "Medium" | "Low";
 export type FailureReason = "Out of stock" | "No riders" | "Peak hour rush";

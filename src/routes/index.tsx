@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
-import { Activity, ArrowDownRight, ArrowUpRight, Clock3, IndianRupee, RotateCcw, ShieldAlert, ChevronDown, Sparkles, Search, MapPin, ShoppingBasket, CheckCircle2, PackageCheck, Store, AlertTriangle, TrendingUp, Milk, Egg, Wheat, Apple, Cookie, CupSoda, Package } from "lucide-react";
+import { Activity, ArrowDownRight, ArrowUpRight, Clock3, IndianRupee, ShieldAlert, ChevronDown, Sparkles, Search, MapPin, ShoppingBasket, CheckCircle2, PackageCheck, Store, AlertTriangle, TrendingUp, Milk, Egg, Wheat, Apple, Cookie, CupSoda, Package } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, LabelList } from "recharts";
 import { AppHeader, type ViewTab } from "@/components/AppHeader";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import marketImage from "@/assets/grocery-market.jpg";
 import {
-  orders, riskLevel, ACTION_IMPACT, ACTION_LABELS, cohortData, failureBreakdown,
+  orders as initialOrders, riskLevel, ACTION_IMPACT, ACTION_LABELS, cohortData, failureBreakdown,
   savingsFromSliders, formatINR, stores, products, categories,
   type ActionType, type RiskLevel, type FailureReason,
 } from "@/lib/data";
@@ -45,6 +45,7 @@ type OpsTab = typeof opsTabs[number];
 type CartItem = { key: string; productId: string; storeId: string; quantity: number };
 
 function Dashboard() {
+  const [orders, setOrders] = useState(() => initialOrders.map((order) => ({ ...order })));
   const [tab, setTab] = useState<ViewTab>("customer");
   const [opsTab, setOpsTab] = useState<OpsTab>("At-Risk Customer Recovery");
   const [storeId, setStoreId] = useState<string>(stores[0].id);
@@ -61,6 +62,7 @@ function Dashboard() {
   const [displayedSaved, setDisplayedSaved] = useState(0);
 
   const resetDemo = () => {
+    setOrders(initialOrders.map((order) => ({ ...order })));
     setTab("customer"); setOpsTab("At-Risk Customer Recovery"); setStoreId(stores[0].id);
     setSearch(""); setCategory("All"); setCart([]); setConfidenceOverrides({}); setAuditCounts({});
     setApplied({}); setFilter("All"); setLateReduction(30); setCancelReduction(30);
