@@ -1,4 +1,4 @@
-- [x] Add bulk top-10 rescue with animated simulated revenue saved.
-- [x] Add delivery-health comparison and dominant revenue-at-risk figure.
-- [x] Soften and annotate both charts.
-- [x] Make Live Orders actions fit without horizontal scrolling and verify interactions.
+- [x] Rebrand shared header and add three top tabs, story chain, and reset control.
+- [x] Build simulated customer shopping and partner audit flows with connected in-memory state.
+- [x] Reorganize existing operations tools under three subtabs without losing actions, charts, or sliders.
+- [x] Apply dark navy/teal visual system and verify desktop/mobile interactions.
