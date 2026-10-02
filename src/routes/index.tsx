@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { Activity, ArrowDownRight, ArrowUpRight, Clock3, IndianRupee, RotateCcw, ShieldAlert } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, LabelList } from "recharts";
 import { AppHeader } from "@/components/AppHeader";
@@ -122,6 +122,6 @@ function Dashboard() {
   );
 }
 
-function Metric({ label, value, detail, icon, note }: { label: string; value: string; detail: string; icon: React.ReactNode; note?: string }) {
+function Metric({ label, value, detail, icon, note }: { label: string; value: string; detail: string; icon: ReactNode; note?: string }) {
   return <div className="min-h-36 rounded-lg border border-border bg-card p-4 shadow-panel sm:p-5"><div className="flex items-start justify-between gap-2"><p className="text-xs font-bold uppercase leading-snug text-muted-foreground">{label}</p><span className="text-risk-low">{icon}</span></div><p className="mt-3 text-2xl font-extrabold text-foreground sm:text-3xl">{value}</p><p className="mt-1 text-xs font-medium text-muted-foreground">{detail}</p>{note && <p className="mt-2 text-xs font-semibold text-risk-high">{note}</p>}</div>;
 }
