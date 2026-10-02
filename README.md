@@ -41,4 +41,9 @@ git clone <this-repository-url>
 cd <repository-name>
 npm i
 npm run dev
-```
+```## Testing
+
+- Framework: Vitest + React Testing Library (jsdom)
+- Run all tests: `npm test` (watch mode: `npm run test:watch`)
+- Tests live in `src/test/` and next to source as `*.test.ts(x)`
+- Covered: app routing (`app-routing.test.tsx`) and utility helpers (`utils.test.ts`)
