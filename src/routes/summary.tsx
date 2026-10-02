@@ -18,8 +18,8 @@ export const Route = createFileRoute("/summary")({
 function SummaryPage() {
   const high = orders.filter((o) => o.baseScore >= 70).length;
   const medium = orders.filter((o) => o.baseScore >= 40 && o.baseScore < 70).length;
-  const topReason = [...failureBreakdown].sort((a, b) => b.count - a.count)[0];
-  const reorderGap = cohortData[0].reorderRate - cohortData[1].reorderRate;
+  const topReason = [...failureBreakdown].sort((a, b) => b.count - a.count)[0]!;
+  const reorderGap = cohortData[0]!.reorderRate - cohortData[1]!.reorderRate;
 
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">

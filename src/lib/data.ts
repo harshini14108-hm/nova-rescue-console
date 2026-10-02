@@ -45,13 +45,13 @@ export const orders: Order[] = (() => {
   const rand = mulberry32(42);
   const list: Order[] = [];
   for (let i = 0; i < 200; i++) {
-    const reason = REASONS[Math.floor(rand() * REASONS.length)];
+    const reason = REASONS[Math.floor(rand() * REASONS.length)]!;
     const reasonBoost = reason === "No riders" ? 22 : reason === "Peak hour rush" ? 14 : 8;
     const baseScore = Math.min(98, Math.max(4, Math.round(rand() * 70 + reasonBoost + rand() * 20 - 10)));
     list.push({
       id: `NC-${10000 + i}`,
-      customer: `${FIRST[Math.floor(rand() * FIRST.length)]} ${LAST[Math.floor(rand() * LAST.length)]}`,
-      zone: ZONES[Math.floor(rand() * ZONES.length)],
+      customer: `${FIRST[Math.floor(rand() * FIRST.length)]!} ${LAST[Math.floor(rand() * LAST.length)]!}`,
+      zone: ZONES[Math.floor(rand() * ZONES.length)]!,
       items: 1 + Math.floor(rand() * 9),
       value: Math.round(150 + rand() * 1800),
       etaMinutes: 8 + Math.floor(rand() * 55),
