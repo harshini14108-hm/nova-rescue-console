@@ -1,4 +1,4 @@
-- [ ] Add bulk top-10 rescue with animated simulated revenue saved.
-- [ ] Add delivery-health comparison and dominant revenue-at-risk figure.
-- [ ] Soften and annotate both charts.
-- [ ] Make Live Orders actions fit without horizontal scrolling and verify interactions.
+- [x] Add bulk top-10 rescue with animated simulated revenue saved.
+- [x] Add delivery-health comparison and dominant revenue-at-risk figure.
+- [x] Soften and annotate both charts.
+- [x] Make Live Orders actions fit without horizontal scrolling and verify interactions.
