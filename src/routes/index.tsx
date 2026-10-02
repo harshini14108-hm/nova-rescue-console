@@ -87,7 +87,6 @@ function Dashboard() {
 
   const visible = filter === "All" ? enriched : enriched.filter((o) => riskLevel(o.score) === filter);
   const savings = savingsFromSliders(lateReduction, cancelReduction);
-  const maxFailure = Math.max(...failureBreakdown.map((f) => f.count));
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-10">
