@@ -130,4 +130,8 @@ export const products = [
   { id: "juice", name: "Mango Juice", size: "1 L carton", price: 110, category: "Beverages", icon: "🧃", confidence: 62, units: 4, storeId: "green-basket" },
   { id: "eggs-verified", name: "Farm Eggs", size: "Pack of 6", price: 74, category: "Dairy & Eggs", icon: "🥚", confidence: 98, units: 17, storeId: "corner-mart" },
   { id: "tomato-verified", name: "Fresh Tomatoes", size: "500 g", price: 42, category: "Fresh Produce", icon: "🍅", confidence: 97, units: 15, storeId: "fresh-lane" },
+  { id: "corner-oil", name: "Sunflower Oil", size: "1 L", price: 142, category: "Staples & Grains", icon: "🛒", confidence: 44, units: 3, storeId: "corner-mart" },
+  { id: "fresh-spinach", name: "Fresh Spinach", size: "1 bunch", price: 32, category: "Fresh Produce", icon: "🥬", confidence: 49, units: 2, storeId: "fresh-lane" },
+  { id: "daily-bread", name: "Whole Wheat Bread", size: "400 g", price: 55, category: "Staples & Grains", icon: "🍞", confidence: 57, units: 4, storeId: "daily-needs" },
+  { id: "daily-tea", name: "Masala Tea", size: "250 g", price: 125, category: "Beverages", icon: "☕", confidence: 72, units: 8, storeId: "daily-needs" },
 ] as const;

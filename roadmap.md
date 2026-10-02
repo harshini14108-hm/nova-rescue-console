@@ -1,4 +1,4 @@
-- [ ] Rebrand shared header and add three top tabs, story chain, and reset control.
-- [ ] Build simulated customer shopping and partner audit flows with connected in-memory state.
-- [ ] Reorganize existing operations tools under three subtabs without losing actions, charts, or sliders.
-- [ ] Apply dark navy/teal visual system and verify desktop/mobile interactions.
+- [x] Rebrand shared header and add three top tabs, story chain, and reset control.
+- [x] Build simulated customer shopping and partner audit flows with connected in-memory state.
+- [x] Reorganize existing operations tools under three subtabs without losing actions, charts, or sliders.
+- [x] Apply dark navy/teal visual system and verify desktop/mobile interactions.
