@@ -1,4 +1,4 @@
-- [ ] Remove numeric inventory confidence from grocery and stock-check lists.
-- [ ] Give each of the eight stores a distinct storefront background photo.
-- [ ] Expand the fixed grocery catalog for every store without changing the frontend-only cart and audit behavior.
-- [ ] Verify store switching, product counts, and visible labels.
+- [x] Remove numeric inventory confidence from grocery and stock-check lists.
+- [x] Give each of the eight stores a distinct storefront background photo.
+- [x] Expand the fixed grocery catalog for every store without changing the frontend-only cart and audit behavior.
+- [x] Verify store switching, product counts, and visible labels.
