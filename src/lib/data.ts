@@ -201,7 +201,7 @@ export const products = [
     id: `${store.id}-${item.id}`,
     storeId: store.id,
     price: item.price + (storeIndex % 3) * 2,
-    confidence: [97, 82, 56, 93, 88, 49, 91, 76, 95, 84, 68, 98, 73, 89, 61][(itemIndex + storeIndex * 3) % 15],
-    units: [18, 12, 4, 24, 15, 3, 17, 9, 21, 13, 6, 26, 8, 16, 5][(itemIndex + storeIndex * 3) % 15],
+    confidence: [97, 82, 56, 93, 88, 49, 91, 76, 95, 84, 68, 98, 73, 89, 61][(itemIndex + storeIndex * 3) % 15] ?? 85,
+    units: [18, 12, 4, 24, 15, 3, 17, 9, 21, 13, 6, 26, 8, 16, 5][(itemIndex + storeIndex * 3) % 15] ?? 10,
   })))),
 ] as const;
