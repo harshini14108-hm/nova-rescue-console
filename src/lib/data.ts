@@ -79,8 +79,8 @@ export const ACTION_LABELS: Record<ActionType, string> = {
 
 // Cohort: share of customers who reorder within 30 days, by first-order outcome
 export const cohortData = [
-  { label: "First order on time", reorderRate: 62 },
-  { label: "First order late", reorderRate: 27 },
+  { label: "First order on time", reorderRate: 55 },
+  { label: "First order late", reorderRate: 20 },
 ];
 
 export const failureBreakdown = (() => {
