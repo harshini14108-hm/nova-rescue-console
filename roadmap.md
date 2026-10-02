@@ -2,6 +2,6 @@
 - [x] Give each of the eight stores a distinct storefront background photo.
 - [x] Expand the fixed grocery catalog for every store without changing the frontend-only cart and audit behavior.
 - [x] Verify store switching, product counts, and visible labels.
-- [ ] Add an Ops root-cause banner and Before vs After simulator comparison.
-- [ ] Add linked Customer → Partner Store → Ops strip without changing routes or theme.
-- [ ] Verify and repair mobile overlap, browser errors, and visible button behavior.
+- [x] Add an Ops root-cause banner and Before vs After simulator comparison.
+- [x] Add linked Customer → Partner Store → Ops strip without changing routes or theme.
+- [x] Verify and repair mobile overlap, browser errors, and visible button behavior.
