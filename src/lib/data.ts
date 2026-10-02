@@ -2,7 +2,7 @@
 
 export type RiskLevel = "High" | "Medium" | "Low";
 export type FailureReason = "Out of stock" | "No riders" | "Peak hour rush";
-export type ActionType = "reassign" | "coupon" | "substitute";
+export type ActionType = "reassign" | "coupon" | "substitute" | "priority";
 
 export interface Order {
   id: string;
@@ -67,12 +67,14 @@ export const ACTION_IMPACT: Record<ActionType, number> = {
   reassign: 24,
   coupon: 14,
   substitute: 18,
+  priority: 20,
 };
 
 export const ACTION_LABELS: Record<ActionType, string> = {
   reassign: "Reassign Rider",
   coupon: "Send Apology Coupon",
   substitute: "Substitute Item",
+  priority: "Upgrade Priority",
 };
 
 // Cohort: share of customers who reorder within 30 days, by first-order outcome
