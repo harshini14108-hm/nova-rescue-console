@@ -1,0 +1,4 @@
+- [x] Polish shared navigation, homepage banner, metrics, and risk counters.
+- [x] Improve order-table readability, sorting, and rescue controls.
+- [x] Add clear values and color distinctions to both charts.
+- [x] Align summary styling and verify interactions across viewports.
