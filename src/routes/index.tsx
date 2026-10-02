@@ -6,7 +6,7 @@ import { AppHeader } from "@/components/AppHeader";
 import { Button } from "@/components/ui/button";
 import {
   orders, riskLevel, ACTION_IMPACT, ACTION_LABELS, cohortData, failureBreakdown,
-  savingsFromSliders, formatINR, CANCEL_RATE, type ActionType, type RiskLevel,
+  savingsFromSliders, formatINR, CANCEL_RATE, type ActionType, type RiskLevel, type FailureReason,
 } from "@/lib/data";
 
 export const Route = createFileRoute("/")({
@@ -27,7 +27,7 @@ const RISK_STYLES: Record<RiskLevel, string> = {
   Low: "border-risk-low/25 bg-risk-low-soft text-risk-low",
 };
 const RISK_DOT: Record<RiskLevel, string> = { High: "bg-risk-high", Medium: "bg-risk-medium", Low: "bg-risk-low" };
-const REASON_COLORS: Record<string, string> = {
+const REASON_COLORS: Record<FailureReason, string> = {
   "Out of stock": "var(--chart-1)",
   "No riders": "var(--chart-2)",
   "Peak hour rush": "var(--chart-3)",
