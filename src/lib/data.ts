@@ -117,6 +117,10 @@ export const stores = [
   { id: "corner-mart", name: "Corner Mart", area: "Domlur", distance: "1.4 km", eta: "16–22 min", reliability: 78, audit: "Yesterday, 18:10" },
   { id: "fresh-lane", name: "Fresh Lane Store", area: "Koramangala", distance: "2.1 km", eta: "20–26 min", reliability: 86, audit: "Today, 08:15" },
   { id: "daily-needs", name: "Daily Needs Market", area: "HSR Layout", distance: "2.7 km", eta: "24–30 min", reliability: 73, audit: "Yesterday, 16:30" },
+  { id: "sunrise-super", name: "Sunrise Superette", area: "Bellandur", distance: "3.2 km", eta: "26–32 min", reliability: 82, audit: "Today, 07:50" },
+  { id: "metro-mart", name: "Metro Mart & More", area: "Hebbal", distance: "3.9 km", eta: "28–35 min", reliability: 69, audit: "2 days ago" },
+  { id: "anand-stores", name: "Anand Provision Stores", area: "Malleshwaram", distance: "4.4 km", eta: "30–38 min", reliability: 88, audit: "Today, 10:05" },
+  { id: "quick-kart", name: "Quick Kart Express", area: "JP Nagar", distance: "3.5 km", eta: "27–34 min", reliability: 76, audit: "Yesterday, 20:15" },
 ] as const;
 
 export const categories = ["Dairy & Eggs", "Staples & Grains", "Fresh Produce", "Snacks", "Beverages"] as const;
@@ -134,4 +138,45 @@ export const products = [
   { id: "fresh-spinach", name: "Fresh Spinach", size: "1 bunch", price: 32, category: "Fresh Produce", icon: "🥬", confidence: 49, units: 2, storeId: "fresh-lane" },
   { id: "daily-bread", name: "Whole Wheat Bread", size: "400 g", price: 55, category: "Staples & Grains", icon: "🍞", confidence: 57, units: 4, storeId: "daily-needs" },
   { id: "daily-tea", name: "Masala Tea", size: "250 g", price: 125, category: "Beverages", icon: "☕", confidence: 72, units: 8, storeId: "daily-needs" },
+  // Expanded Green Basket shelf
+  { id: "curd", name: "Fresh Curd", size: "400 g cup", price: 45, category: "Dairy & Eggs", icon: "🥣", confidence: 93, units: 16, storeId: "green-basket" },
+  { id: "paneer", name: "Malai Paneer", size: "200 g", price: 95, category: "Dairy & Eggs", icon: "🧀", confidence: 47, units: 3, storeId: "green-basket" },
+  { id: "atta", name: "Whole Wheat Atta", size: "5 kg bag", price: 240, category: "Staples & Grains", icon: "🌾", confidence: 91, units: 14, storeId: "green-basket" },
+  { id: "dal", name: "Toor Dal", size: "1 kg", price: 155, category: "Staples & Grains", icon: "🫘", confidence: 96, units: 22, storeId: "green-basket" },
+  { id: "onion", name: "Onions", size: "1 kg", price: 42, category: "Fresh Produce", icon: "🧅", confidence: 89, units: 25, storeId: "green-basket" },
+  { id: "potato", name: "Potatoes", size: "1 kg", price: 36, category: "Fresh Produce", icon: "🥔", confidence: 95, units: 30, storeId: "green-basket" },
+  { id: "apple", name: "Shimla Apples", size: "4 pcs", price: 120, category: "Fresh Produce", icon: "🍎", confidence: 58, units: 5, storeId: "green-basket" },
+  { id: "biscuits", name: "Glucose Biscuits", size: "200 g pack", price: 30, category: "Snacks", icon: "🍪", confidence: 97, units: 40, storeId: "green-basket" },
+  { id: "namkeen", name: "Aloo Bhujia", size: "200 g pack", price: 55, category: "Snacks", icon: "🥨", confidence: 84, units: 11, storeId: "green-basket" },
+  { id: "cola", name: "Cola Bottle", size: "750 ml", price: 40, category: "Beverages", icon: "🥤", confidence: 92, units: 19, storeId: "green-basket" },
+  { id: "coffee", name: "Filter Coffee", size: "200 g", price: 165, category: "Beverages", icon: "☕", confidence: 66, units: 6, storeId: "green-basket" },
+  // Corner Mart
+  { id: "corner-milk", name: "Toned Milk", size: "500 ml", price: 28, category: "Dairy & Eggs", icon: "🥛", confidence: 81, units: 10, storeId: "corner-mart" },
+  { id: "corner-bread", name: "Sandwich Bread", size: "400 g", price: 48, category: "Staples & Grains", icon: "🍞", confidence: 63, units: 5, storeId: "corner-mart" },
+  { id: "corner-chips", name: "Salted Chips", size: "90 g", price: 30, category: "Snacks", icon: "🥔", confidence: 90, units: 15, storeId: "corner-mart" },
+  { id: "corner-soda", name: "Lemon Soda", size: "300 ml", price: 25, category: "Beverages", icon: "🍋", confidence: 77, units: 9, storeId: "corner-mart" },
+  // Fresh Lane
+  { id: "fresh-carrot", name: "Carrots", size: "500 g", price: 34, category: "Fresh Produce", icon: "🥕", confidence: 92, units: 14, storeId: "fresh-lane" },
+  { id: "fresh-mango", name: "Alphonso Mangoes", size: "1 kg", price: 320, category: "Fresh Produce", icon: "🥭", confidence: 41, units: 2, storeId: "fresh-lane" },
+  { id: "fresh-curd", name: "Farm Curd", size: "500 g", price: 52, category: "Dairy & Eggs", icon: "🥣", confidence: 87, units: 12, storeId: "fresh-lane" },
+  { id: "fresh-juice", name: "Orange Juice", size: "1 L", price: 130, category: "Beverages", icon: "🧃", confidence: 74, units: 7, storeId: "fresh-lane" },
+  // Daily Needs
+  { id: "daily-sugar", name: "Refined Sugar", size: "1 kg", price: 48, category: "Staples & Grains", icon: "🧂", confidence: 85, units: 13, storeId: "daily-needs" },
+  { id: "daily-soap", name: "Bath Soap", size: "Pack of 3", price: 99, category: "Snacks", icon: "🧼", confidence: 55, units: 4, storeId: "daily-needs" },
+  // Sunrise Superette
+  { id: "sunrise-eggs", name: "Brown Eggs", size: "Pack of 12", price: 135, category: "Dairy & Eggs", icon: "🥚", confidence: 94, units: 20, storeId: "sunrise-super" },
+  { id: "sunrise-rice", name: "Basmati Rice", size: "1 kg", price: 145, category: "Staples & Grains", icon: "🍚", confidence: 88, units: 16, storeId: "sunrise-super" },
+  { id: "sunrise-choco", name: "Dark Chocolate", size: "100 g", price: 110, category: "Snacks", icon: "🍫", confidence: 79, units: 8, storeId: "sunrise-super" },
+  // Metro Mart
+  { id: "metro-butter", name: "Salted Butter", size: "100 g", price: 58, category: "Dairy & Eggs", icon: "🧈", confidence: 46, units: 3, storeId: "metro-mart" },
+  { id: "metro-poha", name: "Flattened Rice Poha", size: "500 g", price: 42, category: "Staples & Grains", icon: "🌾", confidence: 83, units: 11, storeId: "metro-mart" },
+  { id: "metro-water", name: "Mineral Water", size: "1 L", price: 20, category: "Beverages", icon: "💧", confidence: 98, units: 35, storeId: "metro-mart" },
+  // Anand Provision Stores
+  { id: "anand-ghee", name: "Pure Ghee", size: "500 ml", price: 340, category: "Staples & Grains", icon: "🫙", confidence: 90, units: 9, storeId: "anand-stores" },
+  { id: "anand-banana", name: "Elaichi Bananas", size: "6 pcs", price: 55, category: "Fresh Produce", icon: "🍌", confidence: 86, units: 17, storeId: "anand-stores" },
+  { id: "anand-lassi", name: "Sweet Lassi", size: "200 ml", price: 35, category: "Beverages", icon: "🥛", confidence: 61, units: 6, storeId: "anand-stores" },
+  // Quick Kart Express
+  { id: "quick-maggie", name: "Instant Noodles", size: "Pack of 4", price: 56, category: "Snacks", icon: "🍜", confidence: 93, units: 24, storeId: "quick-kart" },
+  { id: "quick-milk", name: "Full Cream Milk", size: "1 L", price: 66, category: "Dairy & Eggs", icon: "🥛", confidence: 50, units: 4, storeId: "quick-kart" },
+  { id: "quick-grapes", name: "Green Grapes", size: "500 g", price: 85, category: "Fresh Produce", icon: "🍇", confidence: 71, units: 8, storeId: "quick-kart" },
 ] as const;
