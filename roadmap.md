@@ -1,4 +1,4 @@
-- [x] Rebrand shared header and add three top tabs, story chain, and reset control.
-- [x] Build simulated customer shopping and partner audit flows with connected in-memory state.
-- [x] Reorganize existing operations tools under three subtabs without losing actions, charts, or sliders.
-- [x] Apply dark navy/teal visual system and verify desktop/mobile interactions.
+- [ ] Remove numeric inventory confidence from grocery and stock-check lists.
+- [ ] Give each of the eight stores a distinct storefront background photo.
+- [ ] Expand the fixed grocery catalog for every store without changing the frontend-only cart and audit behavior.
+- [ ] Verify store switching, product counts, and visible labels.
