@@ -7,9 +7,9 @@ import { ArrowLeft, ArrowUpRight, CircleAlert } from "lucide-react";
 export const Route = createFileRoute("/summary")({
   head: () => ({
     meta: [
-      { title: "Summary — NOVA CART Rescue Console" },
-      { name: "description", content: "Growth is hiding a delivery problem. Simulated executive summary for NOVA CART." },
-      { property: "og:title", content: "Summary — NOVA CART Rescue Console" },
+      { title: "Summary — NOVA PULSE" },
+      { name: "description", content: "Growth is hiding a delivery problem. Simulated executive summary for NOVA PULSE." },
+      { property: "og:title", content: "Summary — NOVA PULSE" },
       { property: "og:description", content: "Growth is hiding a delivery problem." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -67,7 +67,7 @@ function SummaryPage() {
         </p>
       </section>
 
-      <Button asChild className="mt-9 h-11 px-5"><Link to="/"><ArrowLeft size={16} /> Back to Rescue Console <ArrowUpRight size={15} /></Link></Button>
+      <Button asChild className="mt-9 h-11 px-5"><Link to="/"><ArrowLeft size={16} /> Back to NOVA PULSE <ArrowUpRight size={15} /></Link></Button>
     </main>
     </div>
   );
